@@ -1,20 +1,45 @@
 const hamburger = document.querySelector('.hamburger')
 const mobileMenu = document.querySelector('.navLinks')
 
+const images = [
+	'images/foto1.jpeg',
+	'images/foto2.jpeg',
+	'images/foto3.jpeg',
+	'images/foto4.jpeg',
+	'images/foto5.jpeg',
+	'images/foto6.jpeg',
+	'images/foto7.jpeg',
+	'images/foto8.jpeg',
+	'images/foto9.jpeg',
+	'images/foto10.jpeg',
+	'images/foto11.jpeg',
+	'images/sylwiaSkiba.jpg',
+]
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.nav');
-  
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > navbar.offsetHeight) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  });
+const imgSrc = document.querySelector('.photoContainerImg')
+let currentIndex = 0
 
-hamburger.addEventListener('click',()=> {
-    hamburger.classList.toggle('active')
-    mobileMenu.classList.toggle('active')
+function showNextImage() {
+    imgSrc.src = images[currentIndex]
+	currentIndex = (currentIndex + 1) % images.length;
+        setTimeout(showNextImage, 3000);
+}
+
+showNextImage()
+
+document.addEventListener('DOMContentLoaded', function () {
+	const navbar = document.querySelector('.nav')
+
+	window.addEventListener('scroll', function () {
+		if (window.scrollY > navbar.offsetHeight) {
+			navbar.classList.add('scrolled')
+		} else {
+			navbar.classList.remove('scrolled')
+		}
+	})
+})
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active')
+	mobileMenu.classList.toggle('active')
 })

@@ -38,10 +38,10 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 15px;
-	transition:all 1s ease;
+	transition: all 1s ease;
 }
 
-.nav.scrolled{
+.nav.scrolled {
 	background-color: white;
 }
 .nav .logo {
@@ -163,7 +163,6 @@ body {
 /* SECTION ABOUT */
 
 .about {
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -193,10 +192,92 @@ body {
 	text-shadow: 2px 2px 5px var(--colorBrown);
 }
 
+.containerAbout {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 70px 30px;
+}
+
+.photoContainer {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.photoContainerImg {
+	width: 500px;
+	height: 350px;
+	border-radius: 20px;
+	box-shadow: 3px 3px 5px var(--colorBrown);
+	object-fit: cover;
+	object-position: center;
+}
+
+.textContainer {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+}
+
+.textContainer h2 {
+	font-family: var(--menuFont);
+	font-size: 2.5rem;
+	color: var(--colorBrown);
+	text-shadow: 1px 1px 3px black;
+}
+
+.textContainer p {
+	font-family: var(--textFont);
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.textContainer .shopBtn {
+	width: 200px;
+	height: 100px;
+	border-radius: 25px;
+	border: none;
+	background-color: var(--colorBrown);
+	box-shadow: 2px 2px 5px black;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s ease;
+}
+
+.textContainer .shopBtn:hover {
+	background-color: black;
+	box-shadow: 2px 2px 5px var(--colorBrown);
+}
+
+.textContainer .shopBtn a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	font-family: var(--menuFont);
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+	transition: 1s ease;
+}
+
+.textContainer .shopBtn a:hover {
+	color: var(--colorBrown);
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 950px) {
-	.nav .logo {
+	.nav .logo,
+	.title .logo {
 		font-size: 2.8rem;
 	}
 	.hamburger {
@@ -221,8 +302,19 @@ body {
 	.socialLinks {
 		display: flex;
 	}
+	.containerAbout {
+		flex-direction: column;
+		padding: 30px 15px;
+	}
+	.textContainer,
+	.photoContainer {
+		width: 100%;
+	}
+	.textContainer h2 {
+		font-size: 2rem;
+		padding-top: 50px;
+	}
 }
-
 @media (max-width: 780px) {
 	.home {
 		background: url(images/foto3.jpeg);
