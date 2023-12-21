@@ -23,7 +23,7 @@ html {
 }
 
 body {
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 }
 
@@ -38,8 +38,12 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 15px;
+	transition:all 1s ease;
 }
 
+.nav.scrolled{
+	background-color: white;
+}
 .nav .logo {
 	padding-left: 20px;
 	text-decoration: none;
@@ -85,13 +89,21 @@ body {
 	text-shadow: 1px 1px 2px var(--colorBrown);
 }
 
-.socialLinks{
-	width:100%;
-	display:none;
+.socialLinks {
+	width: 100%;
+	display: none;
 	justify-content: space-around;
 	align-items: center;
-	padding-top:40px;
+	padding-top: 40px;
 }
+
+.socialLinks a {
+	transition: 0.7s ease;
+}
+.socialLinks a:hover {
+	scale: 1.3;
+}
+
 /* HAMBURGER */
 
 .hamburger {
@@ -102,7 +114,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
-    z-index:999;
+	z-index: 999;
 }
 
 .bar {
@@ -133,24 +145,67 @@ body {
 .home {
 	background: url(images/homeBack.jpeg);
 	background-size: cover;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
-	display:flex;
+	display: flex;
+}
+
+.homeLinks {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 50px;
+	padding-top: 70px;
+	padding-left: 50px;
+}
+
+/* SECTION ABOUT */
+
+.about {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 50px 0;
+	border-top: 2px solid var(--colorBrown);
+}
+
+.title .logo {
+	padding-left: 20px;
+	text-decoration: none;
+	font-family: var(--logoFont);
+	color: var(--colorBrown);
+	font-size: 3.5rem;
+	text-shadow: 2px 2px 5px black;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.title .logo:hover {
+	color: black;
+	text-shadow: 2px 2px 5px var(--colorBrown);
+}
+
+.title .logo span {
+	color: black;
+	text-shadow: 2px 2px 5px var(--colorBrown);
 }
 
 /* MEDIA QUERIES */
 
 @media (max-width: 950px) {
-    .nav .logo{
-        font-size:2.8rem;
-    }
+	.nav .logo {
+		font-size: 2.8rem;
+	}
 	.hamburger {
 		display: flex;
 	}
 	.navLinks {
 		position: fixed;
 		top: -150%;
-		right:0 ;
+		right: 0;
 		width: 100%;
 		height: 100vh;
 		flex-direction: column;
@@ -161,15 +216,15 @@ body {
 	}
 	.navLinks.active {
 		display: flex;
-		top:0;
+		top: 0;
 	}
-	.socialLinks{
-		display:flex;
+	.socialLinks {
+		display: flex;
 	}
 }
 
-@media(max-width:780px){
-	.home{
+@media (max-width: 780px) {
+	.home {
 		background: url(images/foto3.jpeg);
 		background-size: cover;
 		background-position: left;
