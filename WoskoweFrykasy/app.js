@@ -20,9 +20,9 @@ const imgSrc = document.querySelector('.photoContainerImg')
 let currentIndex = 0
 
 function showNextImage() {
-    imgSrc.src = images[currentIndex]
-	currentIndex = (currentIndex + 1) % images.length;
-        setTimeout(showNextImage, 3000);
+	imgSrc.src = images[currentIndex]
+	currentIndex = (currentIndex + 1) % images.length
+	setTimeout(showNextImage, 2500)
 }
 
 showNextImage()
