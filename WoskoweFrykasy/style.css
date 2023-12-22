@@ -316,6 +316,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top:50px;
 }
 
 .opinionPeople {
@@ -324,8 +325,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
+	padding-bottom:20px;
 }
 
+.opinionPeople span{
+	font-size:5rem;
+	color:var(--colorBrown);
+	text-shadow: 2px 2px 5px black;
+}
 .opinionPeople h3{
 	font-size:3rem;
 	color:var(--colorBrown);
@@ -346,6 +353,15 @@ body {
 	font-style: italic;
 	padding:0 20px;
 }
+
+/* FOOTER */
+
+.footer{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 950px) {
@@ -377,7 +393,7 @@ body {
 	}
 	.containerAbout ,.containerOpinion{
 		flex-direction: column;
-		padding: 30px 15px;
+		padding: 30px 15px 0px;
 	}
 	.textContainer,
 	.photoContainer {
@@ -385,7 +401,7 @@ body {
 	}
 	.textContainer h2,
 	.opinion h2 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		padding-top: 50px;
 	}
 	.stars .bx {
@@ -398,7 +414,7 @@ body {
 		font-size: 2rem;
 	}
 	.opinionPeople p{
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 	}
 }
 @media (max-width: 780px) {
