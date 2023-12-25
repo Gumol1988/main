@@ -1,7 +1,8 @@
 const hamburger = document.querySelector('.hamburger')
 const mobileMenu = document.querySelector('.navLinks')
 const arrowUp = document.querySelector('.bxs-up-arrow-circle')
-
+const links = document.querySelectorAll('.navLinks li')
+const logo = document.querySelector('.logo')
 
 const images = [
 	'images/foto1.jpeg',
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 const scrollUp = () => {
-	window.scrollTo(0,0) 
+	window.scrollTo(0, 0)
 }
 
 const hamburgerActive = () => {
@@ -50,6 +51,21 @@ const hamburgerActive = () => {
 	mobileMenu.classList.toggle('active')
 }
 
+const closeMenu = x => {
+	x.addEventListener('click', () => {
+		hamburger.classList.remove('active')
+		mobileMenu.classList.remove('active')
+	})
+}
 
-hamburger.addEventListener('click',hamburgerActive)
-arrowUp.addEventListener('click',scrollUp)
+const closeMenu2 = () => {
+	hamburger.classList.remove('active')
+	mobileMenu.classList.remove('active')
+	scrollUp
+}
+
+links.forEach(closeMenu)
+
+logo.addEventListener('click', closeMenu2)
+hamburger.addEventListener('click', hamburgerActive)
+arrowUp.addEventListener('click', scrollUp)

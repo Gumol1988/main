@@ -42,5 +42,3 @@ const products = [
         text:'Lorem ipsum dolor sit ament.'
     },
 ]
-
-console.log(products);
