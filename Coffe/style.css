@@ -26,6 +26,25 @@ section {
 	height: 100%;
 }
 
+.btn {
+	background-color: var(--goldColor);
+	padding: 1rem;
+	box-shadow: 0px 0px 30px 0px var(var(--blackColor));
+	border-radius: 2rem;
+	text-decoration: none;
+	color: var(--blackColor);
+	font-style: italic;
+	font-weight: bold;
+	transition: 0.7s ease;
+}
+
+.btn:hover {
+	letter-spacing: 2px;
+	background-color: var(--blackColor);
+	box-shadow: 0px 0px 30px 0px var(--goldColor);
+	color: var(--goldColor);
+}
+
 /* HEADER */
 
 .header {
@@ -110,6 +129,66 @@ section {
 	scale: 1;
 }
 
+.cartContainer {
+	position: fixed;
+	top: 101px;
+	right: -100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	width:40%;
+	transition:.7s ease ;
+}
+
+.cartContainer.active {
+	right:0;
+}
+
+
+.cartContainer .cartItem {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-right:2rem;
+	border-bottom: 1px solid var(--goldColor);
+}
+
+
+
+.cartContainer .cartItem img {
+	height: 100px;
+}
+
+.cartContainer .cartItem .content{
+	display:flex;
+	flex-direction: column;
+	width:100%;
+	gap:5px;
+}
+.cartContainer .cartItem .content h1{
+	font-size: 1.5rem;
+}
+
+.cartContainer .cartItem .content p{
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-style: italic;
+	color:var(--goldColor);
+	text-shadow: 1px 1px var(--blackColor);
+}
+
+.cartContainer .cartItem .bxs-x-circle{
+	font-size:2rem;
+	cursor: pointer;
+	transition:1s ease;
+}
+
+.cartContainer .cartItem .bxs-x-circle:hover{
+	transform: rotate(-360deg);
+	color:var(--goldColor);
+}
+
+
 /* SECTION HOME */
 
 .home {
@@ -140,6 +219,10 @@ section {
 	text-shadow: 1px 1px var(--blackColor);
 }
 
+.home .btn {
+	margin-left: 20%;
+}
+
 /* MEDIA QUERRIES */
 
 @media (max-width: 992px) {
@@ -155,9 +238,16 @@ section {
 	.home p {
 		font-size: 1rem;
 	}
+	.cartContainer {
+		width:50%;
+	}
 }
 
 @media (max-width: 756px) {
+	.header .logo img {
+		height: 4rem;
+	}
+
 	.header .icons .bx-menu {
 		display: block;
 	}
@@ -168,7 +258,7 @@ section {
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-end;
-		top: 101px;
+		top: 69px;
 		right: -100%;
 		background: var(--goldColor);
 		padding: 2rem;
@@ -186,9 +276,8 @@ section {
 		text-align: center;
 		width: 100%;
 		text-align: center;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: bold;
-		text-transform: uppercase;
 	}
 
 	.header .nav a:hover {
@@ -207,6 +296,17 @@ section {
 
 	.home h2 {
 		font-size: 1.8rem;
+	}
+
+	.home .btn {
+		margin-left: 0;
+	}
+
+	.cartContainer{
+		top:69px;
+	}
+	.cartContainer {
+		width:70%;
 	}
 }
 
