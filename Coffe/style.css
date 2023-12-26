@@ -15,6 +15,7 @@
 html {
 	scroll-behavior: smooth;
 	font-family: var(--mainFont);
+	user-select: none;
 }
 
 body {
@@ -136,58 +137,54 @@ section {
 	background-color: white;
 	display: flex;
 	flex-direction: column;
-	width:40%;
-	transition:.7s ease ;
+	width: 40%;
+	transition: 0.7s ease;
 }
 
 .cartContainer.active {
-	right:0;
+	right: 0;
 }
-
 
 .cartContainer .cartItem {
-	display:flex;
+	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding-right:2rem;
+	padding-right: 2rem;
 	border-bottom: 1px solid var(--goldColor);
 }
-
-
 
 .cartContainer .cartItem img {
 	height: 100px;
 }
 
-.cartContainer .cartItem .content{
-	display:flex;
+.cartContainer .cartItem .content {
+	display: flex;
 	flex-direction: column;
-	width:100%;
-	gap:5px;
+	width: 100%;
+	gap: 5px;
 }
-.cartContainer .cartItem .content h1{
+.cartContainer .cartItem .content h1 {
 	font-size: 1.5rem;
 }
 
-.cartContainer .cartItem .content p{
+.cartContainer .cartItem .content p {
 	font-size: 1.5rem;
 	font-weight: bold;
 	font-style: italic;
-	color:var(--goldColor);
+	color: var(--goldColor);
 	text-shadow: 1px 1px var(--blackColor);
 }
 
-.cartContainer .cartItem .bxs-x-circle{
-	font-size:2rem;
+.cartContainer .cartItem .bxs-x-circle {
+	font-size: 2rem;
 	cursor: pointer;
-	transition:1s ease;
+	transition: 1s ease;
 }
 
-.cartContainer .cartItem .bxs-x-circle:hover{
+.cartContainer .cartItem .bxs-x-circle:hover {
 	transform: rotate(-360deg);
-	color:var(--goldColor);
+	color: var(--goldColor);
 }
-
 
 /* SECTION HOME */
 
@@ -239,7 +236,7 @@ section {
 		font-size: 1rem;
 	}
 	.cartContainer {
-		width:50%;
+		width: 50%;
 	}
 }
 
@@ -302,20 +299,32 @@ section {
 		margin-left: 0;
 	}
 
-	.cartContainer{
-		top:69px;
-	}
 	.cartContainer {
-		width:70%;
+		top: 69px;
+
+		width: 70%;
+	}
+	.cartContainer .cartItem img {
+		height: 80px;
+	}
+
+	.cartContainer .cartItem .content h1{
+		font-size: 1.2rem;
+	}
+
+	.cartContainer .cartItem .content p{
+		font-size: 1rem;
 	}
 }
 
+
 @media (max-width: 456px) {
 	.home h2 {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 	}
 
 	.home p {
 		font-size: 0.8rem;
 	}
+	
 }
