@@ -21,9 +21,9 @@ body {
 	background-color: var(--blackColor);
 }
 
-section{
-	width:100%;
-	height:100vh;
+section {
+	width: 100%;
+	height: 100%;
 }
 
 /* HEADER */
@@ -55,11 +55,13 @@ section{
 	font-size: 1.5rem;
 	color: var(--whiteColor);
 	transition: all 0.7s ease;
+	padding: 5px;
+	border-radius: 10px;
 }
 
 .header .nav a:hover {
-	color: var(--goldColor);
-	text-decoration: underline var(--goldColor);
+	background-color: var(--goldColor);
+	color: var(--blackColor);
 }
 
 .header .icons {
@@ -98,7 +100,7 @@ section{
 	outline: none;
 	font-family: var(--mainFont);
 	font-size: 1rem;
-	border:solid 2px var(--goldColor);
+	border: solid 2px var(--goldColor);
 	border-radius: 10px;
 	scale: 0;
 	transition: 1s ease;
@@ -110,10 +112,32 @@ section{
 
 /* SECTION HOME */
 
-.home{
-	background:url(images/background.jpg);
+.home {
+	background: url(images/background.jpg);
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1rem;
+	padding: 5rem 0 0 2rem;
+	height: 100vh;
+}
+
+.home h2 {
+	width: 50%;
+	font-size: 3.5rem;
+	color: var(--goldColor);
+	text-transform: uppercase;
+	text-shadow: 1px 1px var(--blackColor);
+}
+
+.home p {
+	width: 50%;
+	font-size: 1.5rem;
+	color: var(--whiteColor);
+	text-shadow: 1px 1px var(--blackColor);
 }
 
 /* MEDIA QUERRIES */
@@ -124,6 +148,12 @@ section{
 	}
 	.header .searchForm input {
 		width: 60%;
+	}
+	.home h2 {
+		font-size: 2.5rem;
+	}
+	.home p {
+		font-size: 1rem;
 	}
 }
 
@@ -140,10 +170,11 @@ section{
 		align-items: flex-end;
 		top: 101px;
 		right: -100%;
-		background-color: var(--whiteColor);
+		background: var(--goldColor);
 		padding: 2rem;
 		border-radius: 5px;
 		transition: 0.7s ease;
+		box-shadow: -11px 14px 23px -7px var(--blackColor);
 	}
 
 	.header .nav.active {
@@ -156,6 +187,13 @@ section{
 		width: 100%;
 		text-align: center;
 		font-size: 2rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.header .nav a:hover {
+		color: var(--whiteColor);
+		text-shadow: 1px 1px var(--blackColor);
 	}
 
 	.header .searchForm input {
@@ -163,7 +201,21 @@ section{
 		margin: auto;
 	}
 
-	.home{
+	.home {
 		background-position: left;
+	}
+
+	.home h2 {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 456px) {
+	.home h2 {
+		font-size: 1.4rem;
+	}
+
+	.home p {
+		font-size: 0.8rem;
 	}
 }
