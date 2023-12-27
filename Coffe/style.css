@@ -145,6 +145,7 @@ section {
 	top: 101px;
 	right: -100%;
 	background-color: white;
+	box-shadow: -11px 14px 23px -7px var(--blackColor);
 	display: flex;
 	flex-direction: column;
 	width: 40%;
@@ -316,7 +317,7 @@ section {
 		align-items: flex-end;
 		top: 69px;
 		right: -100%;
-		background: var(--goldColor);
+		background: var(--whiteColor);
 		padding: 2rem;
 		border-radius: 5px;
 		transition: 0.7s ease;
@@ -329,6 +330,7 @@ section {
 
 	.header .nav a {
 		color: var(--blackColor);
+		text-shadow: 1px 1px 2px var(--goldColor);
 		text-align: center;
 		width: 100%;
 		text-align: center;
@@ -379,11 +381,12 @@ section {
 	}
 	.about .content {
 		flex-direction: column;
-		gap: 10px;
+		padding:1rem;
 	}
 
 	.about .content .text h1 {
 		font-size: 2rem;
+		padding-top:1.5rem;
 	}
 	.about .content .text p {
 		font-size: 1.2rem;
