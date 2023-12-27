@@ -379,6 +379,7 @@ section {
 	}
 	.about .content {
 		flex-direction: column;
+		gap: 10px;
 	}
 
 	.about .content .text h1 {
@@ -386,6 +387,7 @@ section {
 	}
 	.about .content .text p {
 		font-size: 1.2rem;
+		padding: 10px;
 	}
 }
 
@@ -401,7 +403,7 @@ section {
 	.tittle {
 		font-size: 3rem;
 	}
-	.about .content img{
-		padding:10px;
+	.about .content img {
+		padding: 10px;
 	}
 }
