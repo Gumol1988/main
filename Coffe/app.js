@@ -7,6 +7,7 @@ const cartIcon = document.querySelector('.bx-cart')
 const menuLinks = document.querySelectorAll('.nav a')
 const heartIcon = document.querySelectorAll('.bxs-heart')
 
+
 const removeActive = () => {
 	nav.classList.remove('active')
 }
@@ -23,17 +24,17 @@ const changeActiveSearch = () => {
 	cart.classList.remove('active')
 }
 
-const changeActiveMobile = params => {
+const changeActiveMobile = () => {
 	nav.classList.toggle('active')
 	searchInput.classList.remove('active')
 	cart.classList.remove('active')
 }
 
 
-
 menuLinks.forEach(x => {
 	x.addEventListener('click', removeActive)
 })
+
 
 
 cartIcon.addEventListener('click', changeActiveCart)
