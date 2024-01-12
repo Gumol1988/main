@@ -150,7 +150,7 @@ section {
 	box-shadow: -11px 14px 23px -7px var(--blackColor);
 	display: flex;
 	flex-direction: column;
-	width: 40%;
+	width: 60%;
 	transition: 0.7s ease;
 }
 
@@ -188,15 +188,42 @@ section {
 	text-shadow: 1px 1px var(--blackColor);
 }
 
+.cartContainer .cartItem .quantityBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	padding: 0 15px;
+}
+
+.cartContainer .cartItem .quantityBox i {
+	cursor: pointer;
+	margin: 0 10px;
+	color: var(--blackColor);
+	transition: 0.7s ease;
+}
+
+.cartContainer .cartItem .quantityBox i:hover {
+	color: var(--goldColor);
+}
+
+.quantityBox .quantityValue {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--goldColor);
+}
+
 .cartContainer .cartItem .bxs-x-circle {
 	font-size: 2rem;
 	cursor: pointer;
 	transition: 1s ease;
+	color: red;
 }
 
 .cartContainer .cartItem .bxs-x-circle:hover {
 	transform: rotate(-360deg);
-	color: var(--goldColor);
+	color: var(--blackColor);
 }
 
 /* SECTION HOME */
@@ -554,6 +581,39 @@ section {
 	border: 2px solid var(--goldColor);
 }
 
+/* FOOTER */
+
+footer {
+	border-top: 2px solid var(--goldColor);
+	padding: 30px 0;
+	margin: 20px auto;
+	width: 90%;
+}
+
+footer .socialLinks {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer .socialLinks i {
+	font-size: 3rem;
+	border-radius: 50%;
+	padding: 5px;
+	background-color: var(--goldColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.7s ease;
+}
+
+footer .socialLinks i:hover {
+	background-color: var(--blackColor);
+	color: var(--goldColor);
+	box-shadow: 0 0 10px 5px var(--goldColor);
+}
+
 /* MEDIA QUERRIES */
 
 @media (max-width: 992px) {
@@ -642,8 +702,7 @@ section {
 
 	.cartContainer {
 		top: 69px;
-
-		width: 70%;
+		width: 85%;
 	}
 	.cartContainer .cartItem img {
 		height: 80px;
@@ -656,6 +715,10 @@ section {
 	.cartContainer .cartItem .content p {
 		font-size: 1rem;
 	}
+
+	/* .cartContainer .cartItem .quantityBox {
+		font-size: 1.2rem;
+	} */
 	.tittle {
 		font-size: 4rem;
 	}
@@ -674,7 +737,7 @@ section {
 	}
 }
 
-@media (max-width: 456px) {
+@media (max-width: 499px) {
 	.home h2 {
 		font-size: 1.6rem;
 	}
@@ -692,6 +755,6 @@ section {
 	.contactContainer textarea,
 	.contactContainer input,
 	.contactContainer iframe {
-		width:380px;
+		width: 380px;
 	}
 }
