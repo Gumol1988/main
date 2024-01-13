@@ -599,6 +599,8 @@ section {
 .contactContainer iframe {
 	border-radius: 10px;
 	border: 2px solid var(--goldColor);
+	width: 400px;
+	height: 500px;
 }
 
 /* FOOTER */
@@ -815,9 +817,11 @@ footer .arrowUp i {
 		padding: 10px;
 	}
 	.contactContainer form textarea,
-	.contactContainer form input,
-	.contactContainer form iframe {
+	.contactContainer form input {
 		width: 90%;
+	}
+	.contactContainer iframe {
+		width: 346px;
 	}
 	footer .socialLinks i {
 		font-size: 2rem;
