@@ -8,6 +8,8 @@ const menuLinks = document.querySelectorAll('.nav a')
 const heartIcon = document.querySelectorAll('.bxs-heart')
 const arrowUp = document.querySelector('.arrowUp')
 const logo = document.querySelector('.logo')
+const orderNow = document.querySelector('.btn')
+
 
 const removeAll = () => {
 	nav.classList.remove('active')
@@ -80,6 +82,8 @@ menuLinks.forEach(x => {
 	x.addEventListener('click', removeActive)
 })
 
+
+orderNow.addEventListener('click',removeAll)
 logo.addEventListener('click',removeAll)
 arrowUp.addEventListener('click', scroolToUp)
 cartIcon.addEventListener('click', changeActiveCart)
