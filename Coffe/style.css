@@ -819,6 +819,9 @@ footer .arrowUp i {
 	.contactContainer form iframe {
 		width: 90%;
 	}
+	footer .socialLinks i {
+		font-size: 2rem;
+	}
 	footer p {
 		font-size: 1.4rem;
 	}
