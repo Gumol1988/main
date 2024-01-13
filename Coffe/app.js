@@ -32,17 +32,47 @@ const changeActiveMobile = () => {
 
 const scroolToUp = () => {
 	window.scrollTo({
-		top:0,
-		baehavior:'smooth',
+		top: 0,
+		baehavior: 'smooth',
 	})
-	
 }
+
+/*  RENDER PRODUCTS */
+
+const menuContainer = document.querySelector('.menuContainer')
+
+const renderProducts = () => {
+	products.forEach(item => {
+		const newProduct = document.createElement('div')
+		newProduct.classList.add('menuItem')
+		newProduct.dataset.id = item.id
+		newProduct.innerHTML = ` <img src="${item.image}">
+		<span class="tittleItem">${item.name}</span>
+		<div class="starsItem">
+			<i class='bx bxs-star'></i>
+			<i class='bx bxs-star'></i>
+			<i class='bx bxs-star'></i>
+			<i class='bx bxs-star'></i>
+			<i class='bx bxs-star-half'></i>
+		</div>
+		<span class="priceItem">${item.price}</span>
+		<div class="addItem">
+			<i class='bx bxs-cart-download'></i>
+			<i class='bx bxs-heart' ></i>`
+		menuContainer.append(newProduct)
+	})
+}
+
+console.log(products)
+
+/*  ACTIVATION ALL FUNCTIONS */
+
+renderProducts()
 
 menuLinks.forEach(x => {
 	x.addEventListener('click', removeActive)
 })
 
-console.log(arrowUp);
 arrowUp.addEventListener('click', scroolToUp)
 cartIcon.addEventListener('click', changeActiveCart)
 hamburger.addEventListener('click', changeActiveMobile)
