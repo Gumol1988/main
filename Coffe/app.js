@@ -7,6 +7,13 @@ const cartIcon = document.querySelector('.bx-cart')
 const menuLinks = document.querySelectorAll('.nav a')
 const heartIcon = document.querySelectorAll('.bxs-heart')
 const arrowUp = document.querySelector('.arrowUp')
+const logo = document.querySelector('.logo')
+
+const removeAll = () => {
+	nav.classList.remove('active')
+	searchInput.classList.remove('active')
+	cart.classList.remove('active')
+}
 
 const removeActive = () => {
 	nav.classList.remove('active')
@@ -73,6 +80,7 @@ menuLinks.forEach(x => {
 	x.addEventListener('click', removeActive)
 })
 
+logo.addEventListener('click',removeAll)
 arrowUp.addEventListener('click', scroolToUp)
 cartIcon.addEventListener('click', changeActiveCart)
 hamburger.addEventListener('click', changeActiveMobile)
