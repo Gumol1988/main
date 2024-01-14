@@ -9,7 +9,9 @@ const heartIcon = document.querySelectorAll('.bxs-heart')
 const arrowUp = document.querySelector('.arrowUp')
 const logo = document.querySelector('.logo')
 const orderNow = document.querySelector('.btn')
+const cartQuantity = document.querySelector('.cartQuantity')
 
+let carts = []
 
 const removeAll = () => {
 	nav.classList.remove('active')
@@ -67,24 +69,75 @@ const renderProducts = () => {
 		<span class="priceItem">${item.price} zł</span>
 		<div class="addItem">
 			<i class='bx bxs-cart-download'></i>
-			<i class='bx bxs-heart' ></i>`
+			<i class='bx bxs-heart' ></i>
+		</div>`
 		menuContainer.append(newProduct)
 	})
 }
 
-console.log(products)
+renderProducts()
+
+menuContainer.addEventListener('click', event => {
+	let positionClicked = event.target.closest('.menuItem')
+	if (positionClicked && positionClicked.classList.contains('menuItem')) {
+		let productId = positionClicked.dataset.id
+		addToCart(productId)
+	}
+})
+
+const addToCart = productId => {
+	let positionThisProductInCart = carts.findIndex(value => value.productId == productId)
+
+	if (carts.length <= 0) {
+		carts = [
+			{
+				productId: productId,
+				quantity: 1,
+			},
+		]
+	} else if (positionThisProductInCart < 0) {
+		carts.push({
+			productId: productId,
+			quantity: 1,
+		})
+	} else {
+		carts[positionThisProductInCart].quantity += 1
+	}
+	displayAddCart()
+}
+
+const displayAddCart = () => {
+
+	cart.innerHTML = '';
+	carts.forEach(item => {
+		const cartItem = document.createElement('div')
+		 let product = products.find((value) => value.id == item.productId)
+	
+		 if(product){
+			 cartItem.classList.add('cartItem')
+			 cartItem.innerHTML = `
+			  <img src="${product.image}" alt="">
+			 <h1>${product.name}</h1>
+			 <p>39zł</p>
+			 <div class="quantityBox">
+				 <i class='bx bx-plus-circle'></i>
+				 <span class="quantityValue">${item.quantity}</span>
+				 <i class='bx bx-minus-circle'></i>
+			 </div>`
+			 cart.append(cartItem)
+
+		 }
+	})
+}
 
 /*  ACTIVATION ALL FUNCTIONS */
-
-renderProducts()
 
 menuLinks.forEach(x => {
 	x.addEventListener('click', removeActive)
 })
 
-
-orderNow.addEventListener('click',removeAll)
-logo.addEventListener('click',removeAll)
+orderNow.addEventListener('click', removeAll)
+logo.addEventListener('click', removeAll)
 arrowUp.addEventListener('click', scroolToUp)
 cartIcon.addEventListener('click', changeActiveCart)
 hamburger.addEventListener('click', changeActiveMobile)
