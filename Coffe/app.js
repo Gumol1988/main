@@ -64,7 +64,7 @@ const renderProducts = () => {
 			<i class='bx bxs-star'></i>
 			<i class='bx bxs-star-half'></i>
 		</div>
-		<span class="priceItem">${item.price}</span>
+		<span class="priceItem">${item.price} zł</span>
 		<div class="addItem">
 			<i class='bx bxs-cart-download'></i>
 			<i class='bx bxs-heart' ></i>`

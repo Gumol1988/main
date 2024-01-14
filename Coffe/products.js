@@ -35,10 +35,5 @@ const products = [
 		name: 'Old Town',
 		price: 39,
 	},
-	{
-		id: 7,
-		image: 'images/elegant.png',
-		name: 'Elegant',
-		price: 49,
-	},
+	
 ]
