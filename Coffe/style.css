@@ -796,17 +796,20 @@ footer .arrowUp i {
 		top: 69px;
 		width: 100%;
 	}
+
+	.cartContainer .cartItem{
+		padding:0 .5rem;
+	}
 	.cartContainer .cartItem img {
 		height: 80px;
 	}
 
-	.cartContainer .cartItem h1 {
+	.cartContainer .cartItem h1 ,.cartContainer .cartItem p, .cartItem .quantityBox i {
 		font-size: 1.5rem;
 	}
 
-	.cartContainer .cartItem p {
-		font-size: 1.5rem;
-	}
+
+
 
 	/* .cartContainer .cartItem .quantityBox {
 		font-size: 1.2rem;
@@ -861,5 +864,8 @@ footer .arrowUp i {
 		width: 100%;
 		justify-content: center;
 		padding-top: 15px;
+	}
+	.cartContainer .cartItem img {
+		height: 70px;
 	}
 }
